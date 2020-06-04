@@ -1,0 +1,52 @@
+<form action="/send" method="post" class="mt-4">
+  <div class="form-group">
+    <input
+      type="text"
+      name="senderEmail"
+      id="senderEmail"
+      class="form-control shadow-none"
+      placeholder="Sender email"
+      value="<%= typeof senderEmail != 'undefined' ? senderEmail : '' %>"
+      autofocus
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      name="receiverEmail"
+      id="receiverEmail"
+      class="form-control shadow-none"
+      placeholder="Receiver email"
+      value="<%= typeof receiverEmail != 'undefined' ? receiverEmail : '' %>"
+      autofocus
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      name="subject"
+      id="subject"
+      class="form-control shadow-none"
+      placeholder="Subject"
+      value="<%= typeof subject != 'undefined' ? subject : '' %>"
+      autofocus
+    />
+  </div>
+  <div class="form-group">
+    <textarea
+      name="message"
+      id="message"
+      rows="3"
+      class="form-control shadow-none"
+      placeholder="Write message..."
+      value="<%= typeof message != 'undefined' ? message : '' %>"
+    ></textarea>
+  </div>
+  <div class="form-group mb-0">
+    <input
+      type="submit"
+      value="Send Mail"
+      class="btn btn-primary btn-block shadow-none"
+    />
+  </div>
+</form>
